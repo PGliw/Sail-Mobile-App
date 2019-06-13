@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/rental_card"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="@color/colorCardLight"
+        android:layout_margin="10dp"
+>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:animateLayoutChanges="true"
+    >
+
+
+        <TextView
+                android:id="@+id/textView_rental_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                tools:text="Status:     Waiting for confirmation"
+                android:background="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textAlignment="center"/>
+
+        <TextView
+                android:id="@+id/textView_rental_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text=""
+                tools:text="Some name"
+                android:textSize="24sp"
+                android:textAlignment="center"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+        >
+
+            <TextView
+                    android:id="@+id/textView_rental_start_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:drawableStart="@drawable/ic_date_range_black"
+                    tools:text="DD.MM.YYYY"
+                    android:textSize="20sp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="3"
+            />
+
+
+            <TextView
+                    android:id="@+id/textView_rental_start_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_access_time_black"
+                    android:text=""
+                    tools:text="13:30"
+                    android:textSize="20sp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+            />
+
+        </LinearLayout>
+
+        <ImageView android:layout_width="match_parent" android:layout_height="wrap_content"
+                   android:src="@drawable/ic_keyboard_arrow_down_black"
+                   android:padding="8dp"
+                   android:contentDescription="@string/arrow_down"
+                   android:id="@+id/imageView_arrow_down"
+        />
+
+
+        <LinearLayout
+                android:id="@+id/linearLayout_extras"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible"
+        >
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        android:id="@+id/textView_rental_end_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:drawableStart="@drawable/ic_date_range_black"
+                        tools:text="DD.MM.YYYY"
+                        android:textSize="20sp"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                />
+
+
+                <TextView
+                        android:drawableStart="@drawable/ic_hourglass_empty_black_white"
+                        android:id="@+id/textView_rental_end_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        tools:text="15:00"
+                        android:textSize="20sp"
+                        android:textAlignment="textEnd"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                />
+
+            </LinearLayout>
+
+
+            <TextView
+                    android:id="@+id/textView_gear_and_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Rower wodny   × 2"
+                    android:textSize="20sp"
+                    android:gravity="center"
+            />
+
+
+            <LinearLayout
+                    android:id="@+id/linearLayout_weather_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+            >
+                <ImageView
+                        android:id="@+id/imageView_weather_icon"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        tools:src="@drawable/weather_icon_305"
+                        android:layout_weight="2"
+                        android:contentDescription="@string/weather_icon"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:orientation="vertical" android:layout_weight="3">
+                    <TextView
+                            android:id="@+id/textView_temperature"
+                            tools:text="19°C"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:textAlignment="textEnd"
+                            android:textSize="24sp"
+                    />
+                    <TextView
+                            android:id="@+id/textView_wind"
+                            tools:text="12.6 kph"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:textAlignment="textEnd"
+                            android:textSize="16sp"
+                    />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="80dp"
+                          android:orientation="horizontal"
+                          android:layout_marginTop="20dp"
+                          android:layout_marginBottom="10dp"
+            >
+                <ImageButton
+                        android:id="@+id/imageButton_phone"
+                        android:layout_width="match_parent" android:layout_height="match_parent"
+                        android:src="@drawable/ic_phone_white"
+                        android:background="@color/colorSuccess"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:contentDescription="@string/phone"/>
+
+                <ImageButton
+                        android:id="@+id/imageButton_location"
+                        android:layout_width="match_parent" android:layout_height="match_parent"
+                        android:src="@drawable/ic_location_on_white" android:layout_weight="1"
+                        android:background="@color/colorInfo"
+                        android:padding="20dp"
+                        android:contentDescription="@string/location"/>
+
+                <ImageButton
+                        android:id="@+id/imageButton_cancel"
+                        android:layout_width="match_parent" android:layout_height="match_parent"
+                        android:src="@drawable/ic_cancel_black_24dp" android:layout_weight="1"
+                        android:background="@color/colorError"
+                        android:padding="10dp"
+                        android:contentDescription="@string/cancel"/>
+
+            </LinearLayout>
+
+            <ImageView android:layout_width="match_parent" android:layout_height="wrap_content"
+                       android:src="@drawable/ic_keyboard_arrow_up_black" android:contentDescription="@string/arrow_up"
+                       android:padding="8dp"
+                       android:id="@+id/imageView_arrow_up"
+            />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
